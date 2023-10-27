@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:1.20.1
 
 WORKDIR /app/web/
 USER root
@@ -9,4 +9,4 @@ COPY ./dist /app/web/
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off"]
+CMD ["nginx", "-g", "daemon off;"]
